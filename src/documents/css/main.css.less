@@ -1,12 +1,29 @@
-@pageWidth: 768px;
-@bodyColor: #BDC4C9;
-@textColor: #1c1e20;
-@linkColor: #C9419E;
+@pageWidth:    768px;
+@bodyColor:    #4B5257;
+@contentColor: #BDC4C9;
+@textColor:    #1c1e20;
+@linkColor:    #C9419E;
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
 body {
   background-color: @bodyColor;
   color: @textColor;
   font-size: 16px;
+  line-height: 1.5em;
+}
+
+h1, h2, h3 {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+p {
+  margin: 0 0 20px;
 }
 
 a {
@@ -27,6 +44,9 @@ hr {
 #content {
   width: 100%;
   margin: 0 auto;
+  background-color: @contentColor;
+  padding: 20px;
+  margin-top: 20px;
 }
 
 @media (min-width: @pageWidth) {
