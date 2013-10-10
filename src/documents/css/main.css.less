@@ -1,0 +1,36 @@
+@pageWidth: 768px;
+@bodyColor: #BDC4C9;
+@textColor: #1c1e20;
+@linkColor: #C9419E;
+
+body {
+  background-color: @bodyColor;
+  color: @textColor;
+  font-size: 16px;
+}
+
+a {
+  color: @linkColor;
+  border-bottom: 1px dotted @linkColor;
+}
+
+a:visited {
+  text-decoration: line-through;
+  color: darken(@linkColor, 15%);
+}
+
+hr {
+  border-top: 1px solid #4B5257;
+  border-bottom: 1px solid lighten(#4B5257, 30%);
+}
+
+#content {
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (min-width: @pageWidth) {
+  #content {
+    width: @pageWidth;
+  }
+}

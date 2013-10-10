@@ -1,0 +1,11 @@
+---
+layout: default
+---
+
+h1 Express, Part 1
+
+ol
+  for lesson in getCollection('lessons').toJSON()
+    li
+      a(href=lesson.url)= lesson.title
+
