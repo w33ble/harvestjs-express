@@ -43,10 +43,13 @@ hr {
 
 #content {
   width: 100%;
-  margin: 0 auto;
+  margin: 20px auto;
   background-color: @contentColor;
   padding: 20px;
-  margin-top: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  min-height: 320px;
+  background-clip: padding-box;
 }
 
 @media (min-width: @pageWidth) {
