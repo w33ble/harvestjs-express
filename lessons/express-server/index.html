@@ -22,7 +22,19 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <div id="content"><h1>Express, Part 1</h1><ol><li><a href="/lessons/install-express">Installing Express</a></li><li><a href="/lessons/create-project">Creating an Express Project</a></li><li><a href="/lessons/express-server">Your First Express Server</a></li><li><a href="/lessons/making-changes">Making Changes to the Application</a></li><li><a href="/lessons/routes-explained">Express Routes Explained</a></li><li><a href="/lessons/your-first-route">Your First Express Route</a></li><li><a href="/lessons/your-first-view">Your First View</a></li><li><a href="/lessons/additional-view-magic">Additional View Magic</a></li></ol></div>
+        <div id="content"><h1>Your First Express Server</h1><p>In the previous lesson, you created a new express application. Now it&#39;s time to load that application and see what you&#39;ve got.</p>
+<p>Node has its own web server built in, and express uses it to run your application. To do this, we&#39;ll use <code>node</code> on the command line, telling it load <code>app.js</code>. This happens as you might expect, by entering the following from the root of the project:</p>
+<p><code>node app.js</code></p>
+<hr>
+
+<p>You got an error? Well, that&#39;s no good. So why did this happen? Well, this application has some dependencies on third party libraries, referred to as <em>modules</em> in the node world, and you still haven&#39;t installed them. These modules are defined in <code>package.json</code>.</p>
+<p>The <code>package.json</code> file uses the JSON, or <em>Javascript Object Notation</em>, data structure, which is essentially a key-value structure. Take a look at that file to see what I mean. Note the <code>dependencies</code> key, and the modules defined there.</p>
+<p>Now, let&#39;s install those modules. To do that, we&#39;ll use <code>npm</code>, the <em>Node Package Manager</em>. Since our modules are defined in <code>package.json</code>, we simply run <code>npm install</code> and it&#39;ll do the rest.</p>
+<hr>
+
+<p>Now that you have those modules installed, try launching the application again. This time you should get a message that reads <strong>Express server listening on port 3000</strong>.</p>
+<p>Great, your application is running! Open a browser and load <a href="http://localhost:3000"><a href="http://localhost:3000">http://localhost:3000</a></a> to check it out, then move on to the next lesson.</p>
+<a href="/">Back to the index</a></div>
 
         <!--<script src="/vendor/jquery/jquery.min.js"></script>
         <script src="/vendor/bootstrap/dist/js/bootstrap.min.js"></script>-->

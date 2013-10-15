@@ -1,0 +1,9 @@
+*,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
+body{background-color:#4b5257;color:#1c1e20;font-size:16px;line-height:1.5em}
+h1,h2,h3{margin-top:10px;margin-bottom:20px}
+p{margin:0 0 20px}
+a{color:#c9419e;border-bottom:1px dotted #c9419e}
+a:visited{text-decoration:line-through;color:#942a72}
+hr{border-top:1px solid #4B5257;border-bottom:1px solid #969fa5}
+#content{width:100%;margin:20px auto;background-color:#bdc4c9;padding:20px;-webkit-border-radius:20px;border-radius:20px;min-height:320px;background-clip:padding-box}
+@media (min-width:768px){#content{width:768px}}

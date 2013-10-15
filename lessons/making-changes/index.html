@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Express, Part 1</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="/vendor/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/main.css">
+        <script src="/vendor/modernizr/modernizr.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <div id="content"><h1>Making Changes to the Application</h1><p>Now that you have your express application running, let&#39;s make some changes to it.</p>
+<p>Take a look at the <code>routes/index.js</code> file and the <code>exports.index</code> definition. This is <em>CommonJS</em> module syntax. The function being returned is what gets passed in to <code>app.get</code>.</p>
+<p>We&#39;ll dive in to how these routes work later, but for now, change the <code>title</code> from <em>Express</em> to <em>My App</em>, and reload the page in your browser to see the change.</p>
+<hr>
+
+<p>Nothing changed. Why is that? Well, node runs your application from memory and doesn&#39;t watch for changes to files, so the server that is running stays in the state that it was when it was started.</p>
+<p>We&#39;ll need to restart node to see our change. To do this, press <em>control-c</em> in the terminal that is running node to <em>break</em> the application. Now run <code>node app.js</code> again and reload the browser, and you should see you change.</p>
+<hr>
+
+<p>Breaking the application and restarting node with each change isn&#39;t really a workable solution. It would be better if we had an application to watch for changes and restart node for us. Enter <code>nodemon</code>.</p>
+<p>Use <code>npm</code> to install <code>nodemon</code> globally using the <code>-g</code> flag. Remember to use <code>sudo</code> if you&#39;re on Linux of Mac and get permission errors.</p>
+<p><code>npm install -g nodemon</code></p>
+<p>Now that nodemon is installed, use it to run your application. First, <em>break</em> the currently running node process again, then load <code>app.js</code> with <code>nodemon</code> like so:</p>
+<p><code>nodemon app.js</code></p>
+<p>Refresh your browser and see your <em>My App</em> change. To verify that nodemon is working as advertised, go back to <code>routes/index.js</code> and change <em>My App</em> to <em>HarvestJS</em>. You should see a message in your terminal that the server restarted, and refreshing your browser will show your change.</p>
+<p>That&#39;s much nicer, isn&#39;t it? Let&#39;s move on to the next lesson.</p>
+<a href="/">Back to the index</a></div>
+
+        <!--<script src="/vendor/jquery/jquery.min.js"></script>
+        <script src="/vendor/bootstrap/dist/js/bootstrap.min.js"></script>-->
+        <script src="/js/plugins.js"></script>
+        <script src="/js/main.js"></script>
+        
+
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            /*
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+            */
+        </script>
+    </body>
+</html>

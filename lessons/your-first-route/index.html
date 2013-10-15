@@ -22,7 +22,23 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <div id="content"><h1>Express, Part 1</h1><ol><li><a href="/lessons/install-express">Installing Express</a></li><li><a href="/lessons/create-project">Creating an Express Project</a></li><li><a href="/lessons/express-server">Your First Express Server</a></li><li><a href="/lessons/making-changes">Making Changes to the Application</a></li><li><a href="/lessons/routes-explained">Express Routes Explained</a></li><li><a href="/lessons/your-first-route">Your First Express Route</a></li><li><a href="/lessons/your-first-view">Your First View</a></li><li><a href="/lessons/additional-view-magic">Additional View Magic</a></li></ol></div>
+        <div id="content"><h1>Your First Express Route</h1><p>Now that you have a basic understanding of how routes work, let&#39;s add a new one to the application.</p>
+<ul>
+<li>Returning JSON<ul>
+<li>Create a new <code>exports</code> called <code>me</code><ul>
+<li>Set the content to <code>res.send(&#39;me&#39;);</code></li>
+</ul>
+</li>
+<li>Create <code>GET</code> route for <code>/me</code> in the <code>app</code></li>
+<li>In the route, create an object literal describing yourself<ul>
+<li>Include your <code>name</code>, <code>favorite_color</code> and <code>company</code> you work for (or a client you have)</li>
+</ul>
+</li>
+<li>Make <code>/me</code> send your new object</li>
+</ul>
+</li>
+</ul>
+<a href="/">Back to the index</a></div>
 
         <!--<script src="/vendor/jquery/jquery.min.js"></script>
         <script src="/vendor/bootstrap/dist/js/bootstrap.min.js"></script>-->
