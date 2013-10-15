@@ -3,6 +3,14 @@
 
 # Define the DocPad Configuration
 docpadConfig = {
+  templateData:
+    # Scripts
+    getAssetPath: (env) ->
+      if env in ['static']
+        '/harvestjs-express/'
+      else
+        '/'
+
   collections:
     # Fetch in all documents that have pageOrder set within their meta data
     # Order by pageOrder: asc, title: asc
