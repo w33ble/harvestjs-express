@@ -13,7 +13,8 @@
     "docpad-plugin-eco": "~2.0.2",
     "docpad-plugin-cleanurls": "~2.5.1",
     "docpad-plugin-livereload": "~2.5.3",
-    "docpad-plugin-less": "~2.2.0"
+    "docpad-plugin-less": "~2.2.0",
+    "docpad-plugin-coffeescript": "~2.2.2"
   },
   "main": "node_modules/docpad/bin/docpad-server",
   "scripts": {
