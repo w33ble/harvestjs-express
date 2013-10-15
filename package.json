@@ -19,9 +19,5 @@
   "main": "node_modules/docpad/bin/docpad-server",
   "scripts": {
     "start": "node_modules/docpad/bin/docpad-server"
-  },
-  "devDependencies": {
-    "grunt-contrib-connect": "~0.5.0",
-    "grunt": "~0.4.1"
   }
 }
