@@ -12,9 +12,9 @@
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <link rel="stylesheet" href="<%= @assetPath %>vendor/bootstrap/dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="<%= @assetPath %>css/main.css">
-        <script src="<%= @assetPath %>vendor/modernizr/modernizr.js"></script>
+        <link rel="stylesheet" href="<%= @assetPath %>/vendor/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="<%= @assetPath %>/css/main.css">
+        <script src="<%= @assetPath %>/vendor/modernizr/modernizr.js"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -24,10 +24,10 @@
         <!-- Add your site or application content here -->
         <div id="content"><%- @content %></div>
 
-        <!--<script src="<%= @assetPath %>vendor/jquery/jquery.min.js"></script>
-        <script src="<%= @assetPath %>vendor/bootstrap/dist/js/bootstrap.min.js"></script>-->
-        <script src="<%= @assetPath %>js/plugins.js"></script>
-        <script src="<%= @assetPath %>js/main.js"></script>
+        <!--<script src="<%= @assetPath %>/vendor/jquery/jquery.min.js"></script>
+        <script src="<%= @assetPath %>/vendor/bootstrap/dist/js/bootstrap.min.js"></script>-->
+        <script src="<%= @assetPath %>/js/plugins.js"></script>
+        <script src="<%= @assetPath %>/js/main.js"></script>
         <%- @getBlock('scripts').toHTML() %>
 
 

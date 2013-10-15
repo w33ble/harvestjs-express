@@ -6,10 +6,10 @@ docpadConfig = {
   environments:
     static:
       templateData:
-        assetPath: '/harvestjs-express/'
+        assetPath: '/harvestjs-express'
     development:
       templateData:
-        assetPath: '/'
+        assetPath: ''
 
 
   collections:
