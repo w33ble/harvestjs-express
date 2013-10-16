@@ -12,8 +12,8 @@ From your terminal, navigate to a directory you would like to use to install you
 
 <hr>
 
-The easiest way to install `express` is to follow the [installation section](http://expressjs.com/guide.html#executable) of the documentation, so follow along there.
+The easiest way to install `express` is to follow the [installation section](http://expressjs.com/guide.html#executable) of the documentation, so follow along there. Running the install command will take a little bit of time, just be patient.
 
-> If you're on Linux of Mac, you will likely need to put `sudo` before that command and enter your password when asked, since the `global` (note the `-g` flag) install will need to write files to places your normal account doesn't have access to.
+> If you're on Linux or Mac, you will likely need to put `sudo` before that command and enter your password when asked, since the `global` (note the `-g` flag) install will need to write files to places your normal account doesn't have access to.
 
-Once installed, feel free to run `express --help` to verify that everything is working. Don't run any of the other commands yet. When you have Express installed, you can move on to the next lesson.
+Once complete, run `express --help` to verify that everything is working. Don't run any of the other commands or worry about going further in the documentation yet. When you have Express installed, you can move on to the next lesson.

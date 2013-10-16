@@ -6,7 +6,7 @@ pageOrder: 30
 
 In the previous lesson, you created a new express application. Now it's time to load that application and see what you've got.
 
-Node has its own web server built in, and express uses it to run your application. To do this, we'll use `node` on the command line, telling it load `app.js`. This happens as you might expect, by entering the following from the root of the project:
+Node has its own web server built in, and express uses it to run your application. To do this, we'll use `node` on the command line, telling it load `app.js`. This happens as you might expect, by entering the following in your terminal from the root of the project:
 
 `node app.js`
 

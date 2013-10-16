@@ -8,7 +8,7 @@ In the last lesson, I had you open `routes/index.js` and make changes there to a
 
 Express uses HTTP verbs for routes and supports `GET`, `POST`, `PUT` and `DELETE` out of the box for reading, creating, updating and removing assets. These routes are defined using `app.get`, `app.post`, `app.put` and `app.delete`.
 
-`GET` and `POST` requests should be familiar to you if you've worked with form data on webpages in the past. The other two are also important for modifying information on the server via RESTful calls, as you'll learn later. By default, requests are `GET`.
+`GET` and `POST` requests should be familiar to you if you've worked with form data on webpages in the past. The other two are also important for modifying information on the server via RESTful calls, as you'll learn later. By default, requests are `GET`, so using `app.get` is appropriate.
 
 <hr>
 
@@ -26,7 +26,7 @@ Node's `require` command, when given a directory, will try to load `index.js` by
 
 <hr>
 
-What about the next line, `app.get('/users', user.list);`? This is defining another route, `/users`, which you can access at [http://localhost:3000/users](http://localhost:3000/users).
+What about the line below the index route, `app.get('/users', user.list);`? This is defining another route, `/users`, which you can access at [http://localhost:3000/users](http://localhost:3000/users).
 
 Using what you just read above, can you figure out where the code for that route lives?
 
