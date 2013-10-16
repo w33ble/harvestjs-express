@@ -29,13 +29,13 @@
 
 <p>Sending strings is all well and good, but it&#39;s not all that practical. Let&#39;s instead have it output some JSON data about yourself.</p>
 <p>Express has the ability to sense the type of the data being sent to the browser and encode it correctly. What this means is that we can pass an object literal to <code>res.send</code> and express will send the JSON string to the browser, along with a header saying that the payload is JSON data.</p>
-<p>Make an object literal describing yourself, including your <code>name</code>, <code>age</code> in years and anything else you care to include and save it to a variable called <code>myself</code>. An example might look like this:</p>
+<p>Make an object literal inside the callback describing yourself, including your <code>name</code>, <code>age</code> in years and anything else you care to include and save it to a variable called <code>myself</code>. An example might look like this:</p>
 <pre><code>var myself = {
   name: &#39;Node JS&#39;,
   age: &#39;4&#39;,
   occupation: &#39;scalable web apps&#39;
 };</code></pre>
-<p>Now, use <code>res.send</code> to send <code>myself</code> and refresh the page in the browser.</p>
+<p>Now, use <code>res.send</code> to send <code>myself</code> and refresh the page in the browser and you should see the JSON data.</p>
 <hr>
 
 <p>The response header will include <code>Content-Type:application/json</code>. If you are savvy enough to look for yourself, feel free, otherwise just take my word for it. The point is, we didn&#39;t have to do anything special to get express to send our javascript object as JSON data.</p>
