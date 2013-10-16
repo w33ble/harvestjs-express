@@ -22,17 +22,24 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <div id="content"><h1>Your First View</h1><ul>
-<li>Render views<ul>
-<li>Download <a href="/views.zip">views.zip</a>, replacing existing <code>views</code> folder</li>
-<li>Create new view at <code>views/me.ejs</code><ul>
-<li><code>include</code> header and footer (reference <code>index.ejs</code> if needed)</li>
-<li>inject data from your object literal into the unordered list</li>
+        <div id="content"><h1>Your First View</h1><p>Now you have a route to pass information about yourself with requests to <code>/me</code>, but while passing JSON data is super useful for building an API, you might find presenting this information as HTML more useful, so let&#39;s see how that works.</p>
+<p>To get you started, I&#39;ve already created a view for you to use. Download <a href="/views.zip">views.zip</a>, unzip it and replace the existing <code>views</code> folder in your project with the one from the zip file. You should now see <code>index.ejs</code>, <code>me.ejs</code> and an <code>elements</code> folder containing <code>header.ejs</code> and <code>footer.ejs</code>.</p>
+<p>You could probably conclude from the filenames, these templates are in <code>ejs</code>, a markup language written in and for javascript, by the creator of express no less. You&#39;ll find a quick crash course in ejs below. Covering much of ejs is outside the scope of this course, but it&#39;s pretty easy to use. We&#39;ll move on, but if you care to read further you can check out the <a href="https://github.com/visionmedia/ejs">github page</a>.</p>
+<hr>
+
+<p>Before you create a new view to handle the presentation of our information, take a quick look at <code>views/index.ejs</code> to see what&#39;s going on there.</p>
+<p>Notice the use of <code>&lt;%= title %&gt;</code> in this template. This is how ejs outputs variables. The <code>&lt;%= %&gt;</code> syntax (note the <code>=</code>) will cause any information passed in to be HTML escaped. This is useful for preventing cross-site scripting issues, but I digress.</p>
+<p>Now If you take a look at <code>routes/index.js</code>. You may have noticed a few extra things going on here. Let&#39;s run through the important its.</p>
+<ul>
+<li>It&#39;s using <code>res.render</code> instead of <code>res.send</code>. This is how you tell express to <em>render</em> a view, instead telling to simple <em>send</em> information. The first parameter of the call to <code>res.render</code> is the path (starting from the <code>views</code> path) and name of the template to use.</li>
+<li><code>res.render</code> is being given a second parameter as well. This an object literal of the information you want to pass to the template. Here, the object has a key of <code>index</code>, which, as you saw, is being used in the view.</li>
 </ul>
-</li>
-</ul>
-</li>
-</ul>
+<hr>
+
+<p>It&#39;s time to update that callback in the <code>/me</code> route in <code>app.js</code>. Use <code>res.render</code> to render the <code>me</code> view and pass it the <code>myself</code> object.</p>
+<p>Once the route is done, open <a href="http://localhost:3000/me"><a href="http://localhost:3000/me">http://localhost:3000/me</a></a> in your browser. You should see the view rendered as HTML, but you won&#39;t see your information yet since the view isn&#39;t using it. Let&#39;s fix that!</p>
+<p>Open <code>views/me.ejs</code> and take a look at what&#39;s there. You should notice that it&#39;s pretty similar to what was in <code>views/index.ejs</code>, only I&#39;ve changed some of the content. Edit this file to replace <em>NAME</em> and <em>AGE</em> with the proper keys from the <code>myself</code> object that you passed to the view.</p>
+<p>Lastly, reload <a href="http://localhost:3000/me"><a href="http://localhost:3000/me">http://localhost:3000/me</a></a> in your browser and check out your handwork.</p>
 <a href="/harvestjs-express/">Back to the index</a></div>
 
         <!--<script src="/harvestjs-express/vendor/jquery/jquery.min.js"></script>

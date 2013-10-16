@@ -23,21 +23,24 @@
 
         <!-- Add your site or application content here -->
         <div id="content"><h1>Your First Express Route</h1><p>Now that you have a basic understanding of how routes work, let&#39;s add a new one to the application.</p>
-<ul>
-<li>Returning JSON<ul>
-<li>Create a new <code>exports</code> called <code>me</code><ul>
-<li>Set the content to <code>res.send(&#39;me&#39;);</code></li>
-</ul>
-</li>
-<li>Create <code>GET</code> route for <code>/me</code> in the <code>app</code></li>
-<li>In the route, create an object literal describing yourself<ul>
-<li>Include your <code>name</code>, <code>favorite_color</code> and <code>company</code> you work for (or a client you have)</li>
-</ul>
-</li>
-<li>Make <code>/me</code> send your new object</li>
-</ul>
-</li>
-</ul>
+<p>Add a route to handle <code>GET</code> requests to <code>/me</code> in <code>app.js</code>. Don&#39;t worry about including a new route file just yet, we&#39;ll just use the typical express callback, <code>function(req, res) {}</code>. This function will get passed the request, <code>req</code>, and provided with an reference to express&#39; response, <code>res</code>.</p>
+<p>In the callback, add <code>res.send(&#39;me&#39;);</code>. Much like we saw in the <code>/user</code> route handler, this will simply output the string in the browser. Visit <a href="http://localhost:3000/me"><a href="http://localhost:3000/me">http://localhost:3000/me</a></a> to confirm that it&#39;s working.</p>
+<hr>
+
+<p>Sending strings is all well and good, but it&#39;s not all that practical. Let&#39;s instead have it output some JSON data about yourself.</p>
+<p>Express has the ability to sense the type of the data being sent to the browser and encode it correctly. What this means is that we can pass an object literal to <code>res.send</code> and express will send the JSON string to the browser, along with a header saying that the payload is JSON data.</p>
+<p>Make an object literal describing yourself, including your <code>name</code>, <code>age</code> in years and anything else you care to include and save it to a variable called <code>myself</code>. An example might look like this:</p>
+<pre><code>var myself = {
+  name: &#39;Node JS&#39;,
+  age: &#39;4&#39;,
+  occupation: &#39;scalable web apps&#39;
+};</code></pre>
+<p>Now, use <code>res.send</code> to send <code>myself</code> and refresh the page in the browser.</p>
+<hr>
+
+<p>The response header will include <code>Content-Type:application/json</code>. If you are savvy enough to look for yourself, feel free, otherwise just take my word for it. The point is, we didn&#39;t have to do anything special to get express to send our javascript object as JSON data.</p>
+<p>This is the basis for sending data back to a RESTful request. This information will probably come from a database in a real application, but since that data will most likely be represented as a javascript object anyway, this works the same way.</p>
+<p>This is just one way to output information. Let&#39;s move on to rendering HTML with views.</p>
 <a href="/harvestjs-express/">Back to the index</a></div>
 
         <!--<script src="/harvestjs-express/vendor/jquery/jquery.min.js"></script>
