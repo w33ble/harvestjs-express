@@ -11,7 +11,6 @@ docpadConfig = {
       templateData:
         assetPath: ''
 
-
   collections:
     # Fetch in all documents that have pageOrder set within their meta data
     # Order by pageOrder: asc, title: asc
@@ -20,6 +19,8 @@ docpadConfig = {
         relativeOutDirPath:'lessons'
         pageOrder:
           $exists: true
+        hidden:
+          $ne: true
         , [ pageOrder: 1]
       )
 }
