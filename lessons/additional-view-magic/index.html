@@ -23,19 +23,19 @@
 
         <!-- Add your site or application content here -->
         <div id="content"><h1>Additional View Magic</h1><p>In the last lesson, you created a view and used <code>res.render</code> to pass information and render that view. <code>res.render</code> isn&#39;t the only place where you can send information to views though, and may not be the only place you&#39;d want to.</p>
-<p>For example, if you wanted to pass the name of your application in to use as the page&#39;s title, you would only want to do that once, not with every call to render.</p>
+<p>For example, if you wanted to pass the name of your application in to use as the page&#39;s title, you would only want to do that once, not with every call to <code>res.render</code>.</p>
 <p>This sounds like a good exercise, let&#39;s do exactly that!</p>
 <hr>
 
-<p>Start by opening <code>views/elements/header.ejs</code> and locating the <code>title</code> tag in the HTML. You&#39;ll be replacing the <em>HarvestJS Example App</em> text with a reference to title, much like you did in the last less in <code>views/me.ejs</code>. The variable name is simply <code>title</code>.</p>
+<p>Start by opening <code>views/elements/header.ejs</code> and locating the <code>title</code> tag in the HTML. You&#39;ll be replacing the <em>HarvestJS Example App</em> text with a reference to title, much like you did in the last lesson in <code>views/me.ejs</code>. The variable name is simply <code>title</code>.</p>
 <p>Now open <a href="http://localhost:3000/me"><a href="http://localhost:3000/me">http://localhost:3000/me</a></a> in your browser again.</p>
 <hr>
 
 <p>Another error! You should see a <em>ReferenceError</em> stating that <em>title is not defined</em>. This is because we still haven&#39;t set up the <code>title</code> variable for our application, so let&#39;s do that now.</p>
-<p>You&#39;ll be using <code>app.locals</code> to pass information to all views rendered with express. <code>app.locals</code> can be used to pass functions in as well, so it&#39;s useful for creating helper functions in your views as well. Check out the <a href="http://expressjs.com/api.html#app.locals">express docs</a> for some example of how to use <code>app.locals</code>.</p>
+<p>You&#39;ll be using <code>app.locals</code> to pass information to all views rendered with express. <code>app.locals</code> can be used to pass functions in as well, so it&#39;s useful for creating helper functions in your views as well. You can check out the <a href="http://expressjs.com/api.html#app.locals">express docs</a> on your own for some example of how to use <code>app.locals</code> if you&#39;re curious.</p>
 <p>For this lesson, let&#39;s keep it simple and just pass the site title in. Open <code>app.js</code> and take note of all the uses of <code>app.use</code>. These are used to add <em>middleware</em> to express, but we won&#39;t dive in to that just yet. For now, just know that this is a decent area in the file to add other application configuration, like the use of <code>app.locals</code>.</p>
 <p>After the last call to <code>app.use</code>, but before the <em>development only</em> section, add a line <code>app.locals.title = &#39;My HarvestJS App&#39;;</code> and reload the page. Now check the page title and you should see this new setting.</p>
-<p>If that worked, head to the next lesson.</p>
+<p>If that worked, that&#39;s it, you&#39;re done with this course.</p>
 <a href="/harvestjs-express/">Back to the index</a></div>
 
         <!--<script src="/harvestjs-express/vendor/jquery/jquery.min.js"></script>

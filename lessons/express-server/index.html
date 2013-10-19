@@ -28,8 +28,9 @@
 <hr>
 
 <p>You got an error? Well, that&#39;s no good. So why did this happen? Well, this application has some dependencies on third party libraries, referred to as <em>modules</em> in the node world, and you still haven&#39;t installed them. These modules are defined in <code>package.json</code>.</p>
-<p>The <code>package.json</code> file uses the JSON, or <em>Javascript Object Notation</em>, data structure, which is essentially a key-value structure. Take a look at that file to see what I mean. Note the <code>dependencies</code> key, and the modules defined there.</p>
-<p>Now, let&#39;s install those modules. To do that, we&#39;ll use <code>npm</code>, the <em>Node Package Manager</em>. Since our modules are defined in <code>package.json</code>, we simply run <code>npm install</code> and it&#39;ll do the rest.</p>
+<p>The <code>package.json</code> file uses JSON, or <em>Javascript Object Notation</em>, data structure, which is essentially a key-value structure. Take a look at that file to see what I mean. Note the <code>dependencies</code> key, and the modules defined there.</p>
+<p>But wait, didn&#39;t we already install express? Why isn&#39;t that dependency met? We did install express before, but we installed it globally with the <code>-g</code> flag, which will expose the command line tool, but not the web application component. We need to install it locally for this project, which is what the <code>package.json</code> file helps us do.</p>
+<p>Let&#39;s install those modules. To do that, we&#39;ll use <code>npm</code>, the <em>Node Package Manager</em>. Since our modules are defined in <code>package.json</code>, we simply run <code>npm install</code> and it&#39;ll do the rest automatically.</p>
 <hr>
 
 <p>Now that you have those modules installed, try launching the application again. This time you should get a message that reads <strong>Express server listening on port 3000</strong>.</p>
