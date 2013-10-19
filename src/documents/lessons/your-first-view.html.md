@@ -6,7 +6,7 @@ pageOrder: 70
 
 Now you have a route to pass information about yourself with requests to `/me`, but while passing JSON data is super useful for building an API, you might find presenting this information as HTML more useful, so let's see how that works.
 
-To get you started, I've already created a view for you to use. Download [views.zip](../views.zip), unzip it and replace the existing `views` folder in your project with the one from the zip file. You should now see `index.ejs`, `me.ejs` and an `elements` folder containing `header.ejs` and `footer.ejs`.
+To get you started, I've already created a view for you to use. Download [views.zip](../../views.zip), unzip it and replace the existing `views` folder in your project with the one from the zip file. You should now see `index.ejs`, `me.ejs` and an `elements` folder containing `header.ejs` and `footer.ejs`.
 
 You could probably conclude from the filenames that these templates are in `ejs`, a markup language written in and for javascript, by the creator of express no less. You'll find a quick crash course in ejs below. Covering much of ejs is outside the scope of this course, but it's pretty easy to use. We'll move on, but if you care to read further you can check out the [github page](https://github.com/visionmedia/ejs).
 
