@@ -12,9 +12,9 @@ We'll dive in to how these routes work later, but for now, change the `title` fr
 
 <hr>
 
-Hrm, nothing changed. Why is that? Well, node runs your application from memory and doesn't watch for changes to files, so the server that is running stays in the state that it was when it was started.
+Hrm, nothing changed. Why is that? Well, node runs indefinitely from memory, handling requests from that process. It doesn't watch for changes to files, so the server that is running stays in the state that it was when it was first started.
 
-We'll need to restart node to see our change. To do this, press *control-c* in the terminal that is running node to *break* the application. Now run `node app.js` again and reload the browser, and you should see you change.
+To see your changes, you'll need to restart node. To do this, press *control-c* in the terminal that is running node to *break* the application. Now run `node app.js` again and reload the browser, and you should see your change.
 
 <hr>
 
@@ -23,6 +23,8 @@ Breaking the application and restarting node with each change isn't really a wor
 Stop node with *control-c* again and use `npm` to install `nodemon` globally using the `-g` flag. Remember to use `sudo` if you're on Linux or Mac and get permission errors.
 
 `npm install -g nodemon`
+
+<hr>
 
 Now that nodemon is installed, use it to run your application. First, *break* the currently running node process again, then load `app.js` with `nodemon` like so:
 

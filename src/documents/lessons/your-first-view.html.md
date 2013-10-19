@@ -8,7 +8,7 @@ Now you have a route to pass information about yourself with requests to `/me`, 
 
 To get you started, I've already created a view for you to use. Download [views.zip](../views.zip), unzip it and replace the existing `views` folder in your project with the one from the zip file. You should now see `index.ejs`, `me.ejs` and an `elements` folder containing `header.ejs` and `footer.ejs`.
 
-You could probably conclude from the filenames, these templates are in `ejs`, a markup language written in and for javascript, by the creator of express no less. You'll find a quick crash course in ejs below. Covering much of ejs is outside the scope of this course, but it's pretty easy to use. We'll move on, but if you care to read further you can check out the [github page](https://github.com/visionmedia/ejs).
+You could probably conclude from the filenames that these templates are in `ejs`, a markup language written in and for javascript, by the creator of express no less. You'll find a quick crash course in ejs below. Covering much of ejs is outside the scope of this course, but it's pretty easy to use. We'll move on, but if you care to read further you can check out the [github page](https://github.com/visionmedia/ejs).
 
 <hr>
 
@@ -18,8 +18,8 @@ Notice the use of `<%= title %>` in this template. This is how ejs outputs varia
 
 Now If you take a look at `routes/index.js`. You may have noticed a few extra things going on here. Let's run through the important bits.
 
-- It's using `res.render` instead of `res.send`. This is how you tell express to *render* a view, instead telling to simply *send* information. The first parameter of the call to `res.render` is the name of the view, starting from the `views` path, as defined in `app.js` (on or near line 16).
-- `res.render` is being given a second parameter as well. This an object literal of the information you want to pass to the template. Here, the object has a key of `title`, which, as you saw, is being used in the view.
+- It's using `res.render` instead of `res.send`. This is how you tell express to *render* a view, instead telling to simply *send* information. The first parameter of the call to `res.render` is the name of the view file without the ejs extension, starting from the `views` path, as defined in `app.js` (on or near line 16).
+- `res.render` is being given a second parameter here as well. This is an object literal of the information you want to pass to the template. Here, the object has a key of `title`, which, as you saw, is being used in the view.
 
 <hr>
 
@@ -27,7 +27,6 @@ It's time to update that callback in the `/me` route in `app.js`. Use `res.rende
 
 Once the route is done, open [http://localhost:3000/me](http://localhost:3000/me) in your browser. You should see the view rendered as HTML, but you won't see your information yet since the view isn't using it. Let's fix that!
 
-Open `views/me.ejs` and take a look at what's there. You should notice that it's pretty similar to what was in `views/index.ejs`, only I've changed some of the content. Edit this file to replace *NAME* and *AGE* with the proper keys from the `myself` object that you passed to the view.
+Open `views/me.ejs` and take a look at what's there. You should notice that it's pretty similar to what was in `views/index.ejs`, only I've changed some of the content. Edit this file to replace *NAME* and *AGE* with the proper keys from the `myself` object that you passed to the view. Remember the `<%= %>` syntax, and note that the variable names are case-sensitive.
 
-Lastly, reload [http://localhost:3000/me](http://localhost:3000/me) in your browser and check out your handwork.
-
+Lastly, reload [http://localhost:3000/me](http://localhost:3000/me) in your browser and check out your handwork, then move on to the next lesson.

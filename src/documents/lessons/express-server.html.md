@@ -14,9 +14,11 @@ Node has its own web server built in, and express uses it to run your applicatio
 
 You got an error? Well, that's no good. So why did this happen? Well, this application has some dependencies on third party libraries, referred to as *modules* in the node world, and you still haven't installed them. These modules are defined in `package.json`.
 
-The `package.json` file uses the JSON, or *Javascript Object Notation*, data structure, which is essentially a key-value structure. Take a look at that file to see what I mean. Note the `dependencies` key, and the modules defined there.
+The `package.json` file uses JSON, or *Javascript Object Notation*, data structure, which is essentially a key-value structure. Take a look at that file to see what I mean. Note the `dependencies` key, and the modules defined there.
 
-Now, let's install those modules. To do that, we'll use `npm`, the *Node Package Manager*. Since our modules are defined in `package.json`, we simply run `npm install` and it'll do the rest.
+But wait, didn't we already install express? Why isn't that dependency met? We did install express before, but we installed it globally with the `-g` flag, which will expose the command line tool, but not the web application component. We need to install it locally for this project, which is what the `package.json` file helps us do.
+
+Let's install those modules. To do that, we'll use `npm`, the *Node Package Manager*. Since our modules are defined in `package.json`, we simply run `npm install` and it'll do the rest automatically.
 
 <hr>
 
