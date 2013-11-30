@@ -17,3 +17,7 @@ This makes use of some Makefile shortcuts. You don't have to use them if you don
 
 - `make run` is a shortcut for `docpad run`.
 - `make pages` will create a static build of the site and save it to the `static` path. Meant for deploy to gh-pages, or any static hosting option.
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/w33ble/harvestjs-express/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
